@@ -16,6 +16,8 @@ services:
     volumes:
       - "./php/php.ini:/usr/local/etc/php/conf.d/php.ini"
       - "../:/var/www/html"
+    environment:
+      - MYSQL_DATABASE=docker
   db:
     build: mysql
     restart: always
